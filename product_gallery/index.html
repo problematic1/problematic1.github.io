@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Product Image Gallery</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <script type="text/javascript" src="assets/hammer.js"></script>
+    <script type="text/javascript" src="assets/script.js"></script>
+  </head>
+  <body class="product">
+    <section class="image_wrap">
+      <section
+        id="main_image"
+        style="
+          touch-action: pan-y;
+          user-select: none;
+          -webkit-user-drag: none;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <div class="main_wrapper">
+          <img
+            class="prev_img"
+            data-img="31"
+            src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-23-revo.jpg"
+            alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+            title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+          />
+          <img
+            class="current_img"
+            src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-29-revo.jpg"
+            sizes="(max-width: 374w) 374w, (max-width: 724px) 724px, 980px"
+            alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+            title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+          />
+          <img
+            class="next_img"
+            data-img="2"
+            src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-27-revo.jpg"
+            alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+            title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+          />
+        </div>
+        <span id="prev_button"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path class="left_arrow" d="M21,72V61H31V12H21V0L0,36Z" />
+            </g>
+          </svg>
+        </span>
+        <span id="next_button"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path class="right_arrow" d="M10,72V61H0V12H10V0L31,36Z" />
+            </g>
+          </svg>
+        </span>
+      </section>
+      <section id="gallery" class="above_description show_thumbnails">
+        <ul>
+          <li>
+            <img
+              data-img="1"
+              class="thumbnail active"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-29-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="2"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-27-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="3"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-28-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="4"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-1-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="5"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-2-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="6"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-3-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="7"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-4-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="8"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-24-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="9"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-30-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="10"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-5-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="11"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-14-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="12"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-26-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="13"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-13-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="14"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-31-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="15"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-0-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="16"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-6-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="17"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-7-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="18"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-8-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="19"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-9-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="20"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-10-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="21"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-11-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="22"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-12-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="23"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-15-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="24"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-16-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="25"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-17-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="26"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-18-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="27"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-19-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="28"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-20-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="29"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-21-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="30"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-22-revo.jpg"
+            />
+          </li>
+          <li>
+            <img
+              data-img="31"
+              class="thumbnail"
+              alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
+              src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-23-revo.jpg"
+            />
+          </li>
+        </ul>
+      </section>
+    </section>
+  </body>
+</html>
