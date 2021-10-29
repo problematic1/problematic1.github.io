@@ -13,7 +13,7 @@
     <script type="text/javascript" src="assets/script.js"></script>
   </head>
   <body class="product">
-    <section class="image_wrap">
+    <section class="image_wrap gallery_bottom">
       <section
         id="main_image"
         style="
@@ -32,7 +32,8 @@
             title="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
           />
           <img
-            class="current_img"
+            id="current_main"
+            class="swipeable"
             src="https://cf-img.autorevo.com/2021-chevrolet-corvette-houston-tx-6990925/980x980/2596011-29-revo.jpg"
             sizes="(max-width: 374w) 374w, (max-width: 724px) 724px, 980px"
             alt="2021 Chevrolet Corvette 3LT in Houston, TX 77073"
@@ -61,7 +62,7 @@
           </svg>
         </span>
       </section>
-      <section id="gallery" class="above_description show_thumbnails">
+      <section id="gallery">
         <ul>
           <li>
             <img
@@ -345,5 +346,83 @@
         </ul>
       </section>
     </section>
+
+    <div id="controls">
+      <h3>Move Thumbs</h3>
+      <div>
+        <button id="toright" onclick="changeAppearance('gallery', 'right')">
+          To Right
+        </button>
+        <button
+          id="tobottom"
+          disabled
+          onclick="changeAppearance('gallery', 'bottom')"
+        >
+          To Bottom
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function changeAppearance(elementid, position) {
+        var wrap = document.querySelector(".image_wrap");
+
+        switch (elementid) {
+          case "gallery":
+            document
+              .querySelector("button:disabled")
+              .removeAttribute("disabled");
+            if (position == "right") {
+              wrap.classList.remove("gallery_bottom");
+              wrap.classList.add("gallery_right");
+              document
+                .querySelector("#toright")
+                .setAttribute("disabled", "disabled");
+              sizeMainHeight();
+            } else if (position == "bottom") {
+              wrap.classList.remove("gallery_right");
+              wrap.classList.add("gallery_bottom");
+              document
+                .querySelector("#tobottom")
+                .setAttribute("disabled", "disabled");
+              sizeMainHeight();
+            } else {
+              return;
+            }
+            break;
+          default:
+            return;
+        }
+      }
+      function sizeMainHeight() {
+        /* Adjust height of main and gallery to height/max-height of current img */
+        setTimeout(() => {
+          var main = document.querySelector("#main_image");
+          var h = main.querySelector("#current_main").clientHeight + "px";
+          main.style.height = h;
+          main.nextElementSibling.style.maxHeight = h;
+        }, 200);
+      }
+    </script>
+    <style>
+      #controls {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 0 8px 0 0;
+        box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.5);
+      }
+      #controls h3 {
+        margin: 0;
+      }
+      #controls button.dark {
+        background-color: #444;
+        color: white;
+      }
+    </style>
   </body>
 </html>

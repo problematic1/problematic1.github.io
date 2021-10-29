@@ -64,7 +64,7 @@ changeMainImage = function (i) {
 
   main = document.getElementById("main_image");
   gallery = document.getElementById("gallery");
-  current = main.querySelector(".current_img");
+  current = main.querySelector("#current_main");
   prev = main.querySelector(".prev_img");
   next = main.querySelector(".next_img");
   active = gallery.querySelector(".thumbnail.active");
@@ -86,7 +86,7 @@ changeMainImage = function (i) {
 
   return thumb.parentNode.scrollIntoView({
     behavior: "smooth",
-    block: "end",
+    block: "center",
     inline: "center",
   });
 };
@@ -94,7 +94,7 @@ changeMainImage = function (i) {
 initLightbox = function (gallery) {
   var main, current, icon, showLightbox;
   main = document.getElementById("main_image");
-  current = main.querySelector(".current_img");
+  current = document.getElementById("current_main");
   current.addEventListener("click", showLightbox);
 
   icon = document.createElement("span");
@@ -165,26 +165,28 @@ initLightbox = function (gallery) {
 
     var swiper = function () {
       var swipeTarget, touch;
-      swipeTarget = modal.querySelector("#current_image");
-      touch = new Hammer(swipeTarget);
-      touch.on("swipeleft", function (event) {
-        console.log("swipeleft");
-        prev_btn.click();
-      });
-      return touch.on("swiperight", function (event) {
-        console.log("swiperight");
-        next_btn.click();
+      swipeTargets = modal.getElementsByClassName("swipeable");
+      Array.from(swipeTargets).forEach(function (element) {
+        console.log(swipeTargets);
+        touch = new Hammer(swipeTarget);
+        touch.on("swipeleft", function (event) {
+          console.log("swipeleft");
+          prev_btn.click();
+        });
+        return touch.on("swiperight", function (event) {
+          console.log("swiperight");
+          next_btn.click();
+        });
       });
     };
-    swiper();
+    document.addEventListener("DOMContentLoaded", swiper);
 
-    document.addEventListener("keydown", trackKey);
-    function trackKey(e) {
-      console.log(e.keyCode);
+    var trackKey = function (e) {
       if (e.keyCode == 27) close.click();
       if (e.keyCode == 39) next_btn.click();
       if (e.keyCode == 37) prev_btn.click();
-    }
+    };
+    document.addEventListener("keydown", trackKey);
 
     var close = document.getElementById("close_x");
     close.addEventListener("click", function () {
@@ -242,10 +244,12 @@ pcnVals = function (i, count) {
 };
 
 sizeMainHeight = function () {
-  /* Adjust height of main to height of current img */
+  /* Adjust height of main and gallery to height/max-height of current img */
   setTimeout(() => {
     var main = document.querySelector("#main_image");
-    main.style.height = main.querySelector(".current_img").clientHeight + "px";
+    var h = main.querySelector("#current_main").clientHeight + "px";
+    main.style.height = h;
+    main.nextElementSibling.style.maxHeight = h;
   }, 200);
 };
 
