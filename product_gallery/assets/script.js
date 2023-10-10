@@ -116,20 +116,12 @@ initLightbox = function (gallery) {
           <svg version="1.1" class="inward_arrows" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26.8 25.7" xml:space="preserve"><g> <polygon class="nw" points="26.8,15.4 16.4,15.4 16.4,25.7 20.2,21.9 24,25.5 26.8,22.7 23.1,19 " /> <polygon class="ne" points="26.8,10.4 16.4,10.4 16.4,0 20.2,3.9 24,0.2 26.8,3 23.1,6.7" /> <polygon class="se" points="0,15.4 10.4,15.4 10.4,25.7 6.5,21.9 2.8,25.5 0,22.7 3.7,19" /> <polygon class="sw" points="0,10.4 10.4,10.4 10.4,0 6.5,3.9 2.8,0.2 0,3 3.7,6.7" /></g></svg> 
         </p>
       <section>
-        <span id="prev_button" data-img=""
-          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72">
-            <g id="Layer_1-2" data-name="Layer 1">
-              <path class="left_arrow" d="M21,72V61H31V12H21V0L0,36Z" />
-            </g>
-          </svg>
+        <span id="prev_button" data-img="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72"><g id="Layer_1-2" data-name="Layer 1"><path class="left_arrow" d="M21,72V61H31V12H21V0L0,36Z" /></g></svg>
         </span>
         <div id="current_image"><img data-img="" src="" /></div>
-        <span id="next_button" data-img=""
-          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72">
-            <g id="Layer_1-2" data-name="Layer 1">
-              <path class="right_arrow" d="M10,72V61H0V12H10V0L31,36Z" />
-            </g>
-          </svg>
+        <span id="next_button" data-img="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 72"><g id="Layer_1-2" data-name="Layer 1"><path class="right_arrow" d="M10,72V61H0V12H10V0L31,36Z" /></g></svg>
         </span>
       </section>
       `;
