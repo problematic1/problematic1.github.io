@@ -1,0 +1,142 @@
+/* Base Styles */
+main.mx-auto {
+  transition: all 0.3s ease;
+  width: 100%;
+  padding-left: 76px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+body.sidebar-collapsed main.mx-auto {
+  padding-left: 1rem;
+} 
+  
+@media (max-width: 768px) {
+  main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  main.mx-auto {
+    padding-left: calc(250px + 1rem);
+  }
+} 
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 48px;
+  }
+}*/
+
+body {
+  font-family: "Overpass", "Arial", sans-serif !important;
+  line-height: 1.4;
+  color: #676767;
+}
+
+
+main {
+  padding-top: 240px;
+}
+/* Custom Utility Classes */
+.bg-primary {
+  background-color: #f6931e;
+}
+
+.bg-secondary {
+  background-color: #094673;
+}
+
+.bg-grey {
+  background-color: #676767;
+}
+
+.text-primary {
+  color: #f6931e;
+}
+
+.text-secondary {
+  color: #094673;
+}
+
+.text-grey {
+  color: #676767;
+}
+
+.border-primary {
+  border-color: #f6931e;
+}
+
+.border-secondary {
+  border-color: #094673;
+}
+
+/* Listing Styles */
+.listing-thumb {
+  transition: all 0.2s ease;
+}
+
+.listing-thumb:hover {
+  transform: translateY(-2px);
+}
+
+.listing-actions {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.listing-thumb:hover .listing-actions {
+  opacity: 1;
+}
+
+/* Animation Classes */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Form Element Focus States */
+input:focus,
+textarea:focus {
+  outline: 2px solid #f6931e;
+  border-color: #f6931e;
+}
+
+/* Video Embed Aspect Ratio */
+.aspect-w-16.aspect-h-9 {
+  aspect-ratio: 16 / 9;
+}
+
+
+
+@media (min-width: 768px) {
+  main.mx-auto {
+    transform: translateX(240px);
+    max-width: 528px;
+    margin: 0;
+    padding-left: 16px;
+  }
+  .sidebar-collapsed main.mx-auto {
+    transform: translateX(60px);
+    max-width: 708px;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  main.mx-auto {
+    max-width: calc(100% - 240px);
+  }
+  .sidebar-collapsed main.mx-auto {
+    max-width: calc(100% - 60px);
+  }
+}
+
+
+
+@media (min-width: 1880px) {
+  .container {
+    max-width: 1880px !important;
+  }
+}

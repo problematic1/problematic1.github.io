@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>AutoRevo VMS Style Guide | UX Standards Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f6931e',
+                        secondary: '#094673',
+                        grey: '#676767',
+                        carfax_blue: '#027bae'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50">
+    <custom-header></custom-header>
+    <custom-sidebar></custom-sidebar>
+    <main class="container mx-auto px-4 lg:pt-[240px]">
+        <section class="mb-12">
+            <h1 class="text-4xl font-bold text-secondary mb-6">AutoRevo VMS Style Guide </h1>
+            <p class="text-lg text-grey mb-8">Comprehensive UX standards document for AutoRevo Vehicle Management System
+            </p>
+        </section>
+
+        <!-- Branding Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Branding</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-primary mb-4">Logo Variations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+                    <div class="flex flex-col items-center">
+                        <img src="images/autorevo_logo.svg" alt="Main Logo" class="m-auto">
+                        <span class="text-sm text-grey m-auto mb-0">Main Logo</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="images/ar_favicon.ico" alt="Icon Logo" class="m-auto h-16">
+                        <span class="text-sm text-grey m-auto mb-0">Icon Logo</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="images/logo_white.png" alt="White Logo" class="bg-secondary p-4 rounded-lg mb-2">
+                        <span class="text-sm text-grey m-auto mb-0">White Logo (on dark)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Typography</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Headings</h3>
+                    <h1 class="text-5xl font-bold text-secondary mb-4">Heading 1</h1>
+                    <h2 class="text-4xl font-bold text-secondary mb-4">Heading 2</h2>
+                    <h3 class="text-3xl font-bold text-secondary mb-4">Heading 3</h3>
+                    <h4 class="text-2xl font-semibold text-secondary mb-4">Heading 4</h4>
+                    <h5 class="text-xl font-semibold text-secondary mb-4">Heading 5</h5>
+                    <h6 class="text-lg font-medium text-secondary">Heading 6</h6>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Body Text</h3>
+                    <p class="text-base text-grey mb-4">Regular paragraph text. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                    <p class="text-sm text-grey mb-4">Small text. Used for captions and secondary information.</p>
+                    <p class="text-xs text-grey mb-4">Extra small text. For legal text or disclaimers.</p>
+                    <p class="text-base font-bold text-secondary mb-4">Bold text for emphasis.</p>
+                    <p class="text-base italic text-secondary">Italic text for alternative voice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Color Palette</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-primary p-6 rounded-lg shadow-md text-white">
+                    <h3 class="text-xl font-bold mb-2">Primary</h3>
+                    <p class="mb-2">#f6931e</p>
+                    <p>Used for primary actions and highlights.</p>
+                </div>
+
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-white">
+                    <h3 class="text-xl font-bold mb-2">Secondary</h3>
+                    <p class="mb-2">#094673</p>
+                    <p>Used for secondary elements and headings.</p>
+                </div>
+
+                <div class="bg-grey p-6 rounded-lg shadow-md text-white">
+                    <h3 class="text-xl font-bold mb-2">Grey</h3>
+                    <p class="mb-2">#676767</p>
+                    <p>Used for body text and secondary information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Elements Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Form Elements</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Input Fields</h3>
+                        <div class="mb-4">
+                            <label class="block text-grey mb-2">Text Input<sup class="text-red-500">*</sup></label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter text">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey mb-2 text-red-600">Text Input<sup class="text-red-500">*</sup>
+                                <span class="text-grey text-sm">(with error)</span></label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border-2 border-red-500 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter text">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey mb-2">Email Input</label>
+                            <input type="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey mb-2">Password Input</label>
+                            <input type="password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Password">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey mb-2">Textarea</label>
+                            <textarea
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="text-sm text-grey">Required Fields<sup class="text-red-500">*</sup></div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Buttons & Controls</h3>
+                        <div class="mb-4">
+                            <button
+                                class="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-6 rounded-md transition duration-200 mr-4 mb-2">
+                                Primary Button
+                            </button>
+                            <button
+                                class="bg-secondary hover:bg-opacity-90 text-white font-bold py-2 px-6 rounded-md transition duration-200">
+                                Secondary Button
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <button
+                                class="border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 px-6 rounded-md transition duration-200 mr-4 mb-2">
+                                Outline Button
+                            </button>
+                            <button
+                                class="border border-secondary text-secondary hover:bg-secondary hover:text-white font-bold py-2 px-6 rounded-md transition duration-200">
+                                Secondary Outline
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox"
+                                    class="form-checkbox h-5 w-5 text-primary focus:ring-primary border-gray-300 rounded">
+                                <span class="ml-2 text-grey">Checkbox</span>
+                            </label>
+                        </div>
+                        <div class="mb-4 leading-8">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="radio"
+                                    class="form-radio h-5 w-5 text-primary focus:ring-primary border-gray-300">
+                                <span class="ml-2 text-grey">Radio Button 1</span>
+                            </label>
+                            <label class="inline-flex items-center md:ml-6">
+                                <input type="radio" name="radio"
+                                    class="form-radio h-5 w-5 text-primary focus:ring-primary border-gray-300">
+                                <span class="ml-2 text-grey">Radio Button 2</span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col lg:flex-row lg:space-x-4">
+                            <div class="mb-4 flex-1">
+                                <label class="block text-grey mb-2">Select Dropdown<sup class="text-red-500">*</sup>
+                                </label>
+                                <select
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-4 flex-1">
+                                <label class="block text-grey mb-2 text-red-500">Select Dropdown<sup
+                                        class="text-red-500">*</sup> <span class="text-grey text-sm">(with
+                                        error)</span></label>
+                                <select
+                                    class="w-full px-4 py-2 border-2 border-red-500 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media & Figures Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Media & Figures</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Image with Caption</h3>
+                    <figure>
+                        <img src="http://static.photos/technology/640x360/42" alt="Sample technology image"
+                            class="w-full rounded-md mb-2">
+                        <figcaption class="text-sm text-grey italic">Figure 1: Example of an image with caption in our
+                            design system.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Video Embed</h3>
+                    <div
+                        class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-md flex items-center justify-center text-grey">
+                        <div class="text-center">
+                            <i data-feather="video" class="w-12 h-12 mx-auto mb-2"></i>
+                            <p>Video placeholder</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-grey mt-2">Standard video embed ratio is 16:9</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts & Notifications Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Alerts & Notifications
+            </h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded">
+                        <div class="flex items-center">
+                            <i data-feather="info" class="mr-2"></i>
+                            <p>This is an informational alert. It's used to provide neutral information.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded">
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="mr-2"></i>
+                            <p>This is a success alert. It indicates a successful or positive action.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded">
+                        <div class="flex items-center">
+                            <i data-feather="alert-triangle" class="mr-2"></i>
+                            <p>This is a warning alert. It indicates a potential issue.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded">
+                        <div class="flex items-center">
+                            <i data-feather="alert-octagon" class="mr-2"></i>
+                            <p>This is an error alert. It indicates a problem that needs attention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Tables Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Data Tables</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
+                <h3 class="text-xl font-bold text-primary mb-4">Standard Data Table</h3>
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Name</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Email</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Status</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Role</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">John Doe</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">john@example.com</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Admin</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a href="#" class="text-primary hover:text-opacity-80 mr-3">Edit</a>
+                                <a href="#" class="text-red-600 hover:text-opacity-80">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">Jane Smith</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">jane@example.com</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Editor</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a href="#" class="text-primary hover:text-opacity-80 mr-3">Edit</a>
+                                <a href="#" class="text-red-600 hover:text-opacity-80">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">Bob Johnson</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">bob@example.com</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Inactive</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Viewer</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a href="#" class="text-primary hover:text-opacity-80 mr-3">Edit</a>
+                                <a href="#" class="text-red-600 hover:text-opacity-80">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="text-xl font-bold text-primary mt-8 mb-4">Striped Table</h3>
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Product</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Category</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Price</th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">Laptop</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Electronics</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">$999.99</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">25</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">Smartphone</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Electronics</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">$699.99</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">42</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-secondary">Headphones</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">Accessories</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">$149.99</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-grey">18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Product Listings Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Product Listings</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-primary mb-4 hidden md:block">Detailed Horizontal View</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 hidden md:table">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                    Image</th>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">
+                                    Vehicle</th>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Age</th>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Pricing Tools</th>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Leads</th>
+                                <!-- <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Auction</th> -->
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Actions</th>
+                                <th
+                                    class="px-4 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider text-center">
+                                    Notes</th>
+                                <th class="w-0"><!--placeholder for hover content column--></th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Existing rows... -->
+                            <tr class="">
+                                <td class="px-4 py-4 whitespace-nowrap relative group">
+                                    <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/honda-accord.jpg"
+                                        alt="2020 Honda Accord" class="h-16 w-24 object-cover rounded">
+                                    <div
+                                        class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-4 left-16 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                                        <div class="text-sm font-bold text-secondary">2020 Honda Accord EX</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span>
+                                            32,450 mi</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span>
+                                            Blue - Gray</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Transmission:</span> Automatic</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Engine:</span> 2.4L I4 185hp 181ft. lbs.
+                                        </div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                            1HGCR2F30DA232146</div>
+                                        <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span>
+                                            DA232146M</div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4">
+                                    <div class="text-sm font-medium text-secondary">2020 Honda Accord EX</div>
+                                    <div class="text-xs text-grey">Stock: DA232146M </div>
+                                </td>
+                                <td class="px-4 py-4 whitespace-nowrap text-center">
+                                    <div class="relative group">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">20
+                                            days</span>
+                                        <span
+                                            class="absolute top-0 left-1/2 -translate-x-1/2 z-10 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto px-2 border border-green-600 rounded-full bg-green-900 text-green-200 text-xs leading-5 font-semibold cursor-default">Overall
+                                            Age: 26 days</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm font-medium text-secondary">$22,995</div>
+                                    <div class="text-xs text-grey flex-col space-y-2">
+                                        <div class="relative group inline-block">
+                                            <button
+                                                class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto">
+                                                <img src="images/inline-logo.svg" alt="inLine" class="h-3 inline-block">
+                                            </button>
+                                            <div
+                                                class="absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-0 left-0 z-10 w-max h-max bg-white border border-8 rounded radius-lg border-primary flex flex-col transition-opacity text-left">
+                                                <div
+                                                    class="text-sm font-bold text-white bg-primary pt-0 pr-2 pb-2 pl-0">
+                                                    <span class="bg-white px-1 pb-1 rounded radius-xs mr-2"><img
+                                                            src="images/inline-logo.svg" alt="inLine"
+                                                            class="h-3 inline-block"></span> Pricing Analysis</div>
+                                                <div class="text-sm text-grey p-1 border-b border-gray-200"><span
+                                                        class="text-gray-400 text-sm">Market Value:</span> $23,500</div>
+                                                <div class="text-sm text-grey p-1 border-b border-gray-200"><span
+                                                        class="text-gray-400 text-sm">Average Price:</span> $22,750
+                                                </div>
+                                                <div class="text-sm text-grey p-1"><span
+                                                        class="text-gray-400 text-sm">Days on Market:</span> 35 days
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="relative group inline-block">
+                                            <button
+                                                class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                    src="images/carfax-logo.svg" alt="CARFAX"
+                                                    class="h-3 inline-block"></button>
+                                            <div
+                                                class="absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-0 left-0 z-10 w-max h-max bg-white border border-8 rounded radius-lg border-carfax_blue flex flex-col transition-opacity text-left">
+                                                <div
+                                                    class="text-sm font-bold text-white bg-carfax_blue pt-0 pr-2 pb-2 pl-0">
+                                                    <span class="bg-white px-1 pb-1 rounded radius-xs mr-2"><img
+                                                            src="images/carfax-logo.svg" alt="inLine"
+                                                            class="h-3 inline-block"></span> History-Based Value</div>
+                                                <table class="w-full text-sm text-grey bg-white p-3 rounded-sm">
+                                                    <tr class="border-b border-gray-200">
+                                                        <th class="py-1 pl-2 text-xs text-left text-grey">Condition</th>
+                                                        <th class="py-1 text-xs text-right text-grey">Wholesale</th>
+                                                        <th class="py-1 text-xs text-right text-grey">Trade</th>
+                                                        <th class="py-1 pr-2 text-xs text-right text-grey">Retail</th>
+                                                    </tr>
+                                                    <tr class="border-b border-gray-200">
+                                                        <td class="py-1 pl-2 text-xs">Excellent</td>
+                                                        <td class="py-1 text-right">$22,771</td>
+                                                        <td class="py-1 text-right">$22,771</td>
+                                                        <td class="py-1 pr-2 text-right">$22,771</td>
+                                                    </tr>
+                                                    <tr class="border-b border-gray-200">
+                                                        <td class="py-1 pl-2 text-xs">Good</td>
+                                                        <td class="py-1 text-right">$20,949</td>
+                                                        <td class="py-1 text-right">$20,949</td>
+                                                        <td class="py-1 pr-2 text-right">$20,949</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="py-1 pl-2 text-xs">Fair</td>
+                                                        <td class="py-1 text-right">$18,672</td>
+                                                        <td class="py-1 text-right">$18,672</td>
+                                                        <td class="py-1 pr-2 text-right">$18,672</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey">18 leads</div>
+                                    <div class="text-xs text-primary">1 new today</div>
+                                </td>
+                                <!-- <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey text-center">
+                                        <button class="p-2 bg-gray-200 text-white hover:bg-gray-300 rounded radius-md flex items-center space-x-1 m-auto" title="Click to launch auction">
+                                            <img src="images/ebay-logo-white.svg" alt="eBay" class="h-6 inline-block">
+                                        </button>
+                                        <div class="text-xs text-grey mt-2">Not listed</div>
+                                    </div>
+                                </td> -->
+                                <td class="px-4 py-4 whitespace-nowrap">
+                                    <div class="flex flex-wrap text-center justify-center">
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                                class="fas fa-dollar"></i></button>
+                                        <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                                class="fas fa-camera "></i></button>
+                                        <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                                class="fas fa-video"></i></button>
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                                class="fas fa-gavel"></i></button>
+                                        <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                            title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                        <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                                class="fas fa-tag"></i></button>
+                                        <button class="p-1 text-purple-600 hover:text-opacity-80"
+                                            title="Archive listing"><i class="fas fa-archive"></i></button>
+                                        <button class="p-1 text-gray-400 hover:text-opacity-80"
+                                            title="Delete listing"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-xs text-grey"><span>Needs detailing</span>
+                                        <button class="p-1 text-black hover:text-opacity-80" title="Edit notes"><i
+                                                class="fas fa-edit text-sm text-primary ml-auto mr-1"></i></button>
+                                    </div>
+                                </td>
+                                <td class="w-0">
+
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="px-4 py-4 whitespace-nowrap relative group">
+                                    <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/toyota-camry.jpg"
+                                        alt="2024 Toyota Camry" class="h-16 w-24 object-cover rounded">
+                                    <div
+                                        class="px-4 py-4 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-4 left-16 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                                        <div class="text-sm font-bold text-secondary">2024 Toyota Camry XLE</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span>
+                                            21,428 mi</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span>
+                                            Other - Other</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Transmission:</span> Automatic</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Engine:</span> 2.5L I4 203hp 184ft. lbs.
+                                        </div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                            4T1F11AK0RU864335</div>
+                                        <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span>
+                                            RU864335M</div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4">
+                                    <div class="text-sm font-medium text-secondary">2024 Toyota Camry XLE</div>
+                                    <div class="text-xs text-grey">Stock: RU864335M</div>
+                                </td>
+                                <td class="px-4 py-4 whitespace-nowrap text-center">
+                                    <div class="relative group">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">42
+                                            days</span>
+                                        <span
+                                            class="absolute top-0 left-1/2 -translate-x-1/2 z-10 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto px-2 border border-yellow-600 rounded-full bg-yellow-900 text-yellow-200 text-xs leading-5 font-semibold cursor-default">Overall
+                                            Age: 49 days</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm font-medium text-secondary">$28,750</div>
+                                    <div class="text-xs text-grey flex-col space-y-2">
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/inline-logo.svg" alt="inLine"
+                                                class="h-3 inline-block"></button>
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/carfax-logo.svg" alt="CARFAX"
+                                                class="h-3 inline-block"></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey">12 leads</div>
+                                    <div class="text-xs text-primary">2 new today</div>
+                                </td>
+                                <!-- <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey text-center">
+                                        <button class="p-2 bg-white text-grey hover:bg-gray-100 rounded radius-md border border-blue-600 flex items-center space-x-1 m-auto" title="Click to manage auction">
+                                            <img src="images/ebay-logo.svg" alt="eBay" class="h-6 inline-block">
+                                        </button>
+                                        <div class="text-xs text-grey mt-2">0 bids • 4 days</div>
+                                    </div>
+                                </td> -->
+                                <td class="px-4 py-4 whitespace-nowrap">
+                                    <div class="flex flex-wrap text-center justify-center">
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                                class="fas fa-dollar"></i></button>
+                                        <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                                class="fas fa-camera "></i></button>
+                                        <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                                class="fas fa-video"></i></button>
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                                class="fas fa-gavel"></i></button>
+                                        <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                            title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                        <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                                class="fas fa-tag"></i></button>
+                                        <button class="p-1 text-purple-600 hover:text-opacity-80"
+                                            title="Archive listing"><i class="fas fa-archive"></i></button>
+                                        <button class="p-1 text-gray-400 hover:text-opacity-80"
+                                            title="Delete listing"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-xs text-grey"><span>Needs new photos</span>
+                                        <button class="p-1 text-black hover:text-opacity-80" title="Edit notes"><i
+                                                class="fas fa-edit text-sm text-primary ml-auto mr-1"></i></button>
+                                    </div>
+                                </td>
+                                <td class="w-0">
+
+                                </td>
+                            </tr>
+                            <!-- New row 1 -->
+                            <tr class="">
+                                <td class="px-4 py-4 whitespace-nowrap relative group">
+                                    <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/ford-mustang.jpg"
+                                        alt="2018 Ford Mustang GT" class="h-16 w-24 object-cover rounded">
+                                    <div
+                                        class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-4 left-16 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                                        <div class="text-sm font-bold text-secondary">2018 Ford Mustang GT</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span>
+                                            18,200 mi</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span>
+                                            Red</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Transmission:</span> Manual</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Engine:</span> 5.0L V8 460hp 420ft. lbs.
+                                        </div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                            1FA6P8CF0J5123456</div>
+                                        <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span>
+                                            FMG81234</div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4">
+                                    <div class="text-sm font-medium text-secondary">2018 Ford Mustang GT</div>
+                                    <div class="text-xs text-grey">Stock: FMG81234</div>
+                                </td>
+                                <td class="px-4 py-4 whitespace-nowrap text-center">
+                                    <div class="relative group">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">15
+                                            days</span>
+                                        <span
+                                            class="absolute top-0 left-1/2 -translate-x-1/2 z-10 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto px-2 border border-blue-600 rounded-full bg-blue-900 text-blue-200 text-xs leading-5 font-semibold cursor-default">Overall
+                                            Age: 18 days</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm font-medium text-secondary">$31,500</div>
+                                    <div class="text-xs text-grey flex-col space-y-2">
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/inline-logo.svg" alt="inLine"
+                                                class="h-3 inline-block"></button>
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/carfax-logo.svg" alt="CARFAX"
+                                                class="h-3 inline-block"></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey">7 leads</div>
+                                    <div class="text-xs text-primary">0 new today</div>
+                                </td>
+                                <!-- <td class="px-4 py-4">
+                                    <div class="text-sm text-grey text-center">
+                                        <button class="p-2 bg-white text-grey hover:bg-gray-100 rounded radius-md border border-blue-600 flex items-center space-x-1 m-auto" title="Click to manage auction">
+                                            <img src="images/ebay-logo.svg" alt="eBay" class="h-6 inline-block">
+                                        </button>
+                                        <div class="text-xs text-grey mt-2">3 bids • <span class="text-red-500 font-bold">1 day</span></div>
+                                    </div>
+                                </td> -->
+                                <td class="px-4 py-4 whitespace-nowrap">
+                                    <div class="flex flex-wrap text-center justify-center">
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                                class="fas fa-dollar"></i></button>
+                                        <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                                class="fas fa-camera "></i></button>
+                                        <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                                class="fas fa-video"></i></button>
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                                class="fas fa-gavel"></i></button>
+                                        <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                            title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                        <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                                class="fas fa-tag"></i></button>
+                                        <button class="p-1 text-purple-600 hover:text-opacity-80"
+                                            title="Archive listing"><i class="fas fa-archive"></i></button>
+                                        <button class="p-1 text-gray-400 hover:text-opacity-80"
+                                            title="Delete listing"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-xs text-grey"><span>Fresh trade-in</span>
+                                        <button class="p-1 text-black hover:text-opacity-80" title="Edit notes"><i
+                                                class="fas fa-edit text-sm text-primary ml-auto mr-1"></i></button>
+                                    </div>
+                                </td>
+                                <td class="w-0">
+                                </td>
+                            </tr>
+                            <!-- New row 2 -->
+                            <tr class="">
+                                <td class="px-4 py-4 whitespace-nowrap relative group">
+                                    <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/subaru-outback.jpg"
+                                        alt="2022 Subaru Outback Premium" class="h-16 w-24 object-cover rounded">
+                                    <div
+                                        class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto top-4 left-16 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                                        <div class="text-sm font-bold text-secondary">2022 Subaru Outback Premium</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span>
+                                            12,800 mi</div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span>
+                                            Green</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Transmission:</span> CVT</div>
+                                        <div class="text-sm text-grey"><span
+                                                class="text-gray-400 text-sm">Engine:</span> 2.5L H4 182hp 176ft. lbs.
+                                        </div>
+                                        <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                            4S4BTACC6N3232345</div>
+                                        <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span>
+                                            SOBP22345</div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4">
+                                    <div class="text-sm font-medium text-secondary">2022 Subaru Outback Premium</div>
+                                    <div class="text-xs text-grey">Stock: SOBP22345</div>
+                                </td>
+                                <td class="px-4 py-4 whitespace-nowrap text-center">
+                                    <div class="relative group">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">8
+                                            days</span>
+                                        <span
+                                            class="absolute top-0 left-1/2 -translate-x-1/2 z-10 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto px-2 border border-green-600 rounded-full bg-green-900 text-green-200 text-xs leading-5 font-semibold cursor-default">Overall
+                                            Age: 16 days</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm font-medium text-secondary">$29,200</div>
+                                    <div class="text-xs text-grey flex-col space-y-2">
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/inline-logo.svg" alt="inLine"
+                                                class="h-3 inline-block"></button>
+                                        <button
+                                            class="border rounded radius-md border-gray-200 pt-0 pb-1 px-1 mt-1 mx-auto"><img
+                                                src="images/carfax-logo.svg" alt="CARFAX"
+                                                class="h-3 inline-block"></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey">5 leads</div>
+                                    <div class="text-xs text-primary">1 new today</div>
+                                </td>
+                                <!-- <td class="px-4 py-4 text-center">
+                                    <div class="text-sm text-grey text-center">
+                                        <button class="p-2 bg-gray-200 text-white hover:bg-gray-300 rounded radius-md flex items-center space-x-1 m-auto" title="Click to launch auction">
+                                            <img src="images/ebay-logo-white.svg" alt="eBay" class="h-6 inline-block">
+                                        </button>
+                                        <div class="text-xs text-grey mt-2">Not listed</div>
+                                    </div>
+                                </td> -->
+                                <td class="px-4 py-4 whitespace-nowrap">
+                                    <div class="flex flex-wrap text-center justify-center">
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                                class="fas fa-dollar"></i></button>
+                                        <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                                class="fas fa-camera "></i></button>
+                                        <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                                class="fas fa-video"></i></button>
+                                        <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                                class="fas fa-gavel"></i></button>
+                                        <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                            title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                        <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                                class="fas fa-tag"></i></button>
+                                        <button class="p-1 text-purple-600 hover:text-opacity-80"
+                                            title="Archive listing"><i class="fas fa-archive"></i></button>
+                                        <button class="p-1 text-gray-400 hover:text-opacity-80"
+                                            title="Delete listing"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-4 text-center">
+                                    <div class="text-xs text-grey"><span>Certified pre-owned</span>
+                                        <button class="p-1 text-black hover:text-opacity-80" title="Edit notes"><i
+                                                class="fas fa-edit text-sm text-primary ml-auto mr-1"></i></button>
+                                    </div>
+                                </td>
+                                <td class="w-0">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-primary mt-8 mb-4">Thumbnail Grid View</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Existing cards... -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/honda-accord.jpg"
+                            alt="2020 Honda Accord" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-md font-medium text-secondary mb-1">2020 Honda Accord EX</h4>
+                            <p class="text-xs text-grey mb-3">stk: DA232146M • 32,450 mi • Blue • $22,995</p>
+                            <div class="flex flex-wrap justify-center">
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                        class="fas fa-dollar"></i></button>
+                                <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                        class="fas fa-camera "></i></button>
+                                <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                        class="fas fa-video"></i></button>
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                        class="fas fa-gavel"></i></button>
+                                <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                    title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                        class="fas fa-tag"></i></button>
+                                <button class="p-1 text-purple-600 hover:text-opacity-80" title="Archive listing"><i
+                                        class="fas fa-archive"></i></button>
+                                <button class="p-1 text-gray-400 hover:text-opacity-80" title="Delete listing"><i
+                                        class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div
+                            class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto bottom-12 left-2 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                            <div class="text-sm font-bold text-secondary">2020 Honda Accord EX</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Price:</span> $22,995
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span> 32,450 mi
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span> Blue - Gray
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Transmission:</span>
+                                Automatic</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Engine:</span> 2.4L I4
+                                185hp 181ft. lbs.</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                1HGCR2F30DA232146</div>
+                            <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span> DA232146M
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/toyota-camry.jpg"
+                            alt="2024 Toyota Camry" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-md font-medium text-secondary mb-1">2024 Toyota Camry XLE</h4>
+                            <p class="text-xs text-grey mb-3">stk: RU864335M • 21,428 mi • Other • $28,750</p>
+                            <div class="flex flex-wrap justify-center">
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                        class="fas fa-dollar"></i></button>
+                                <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                        class="fas fa-camera "></i></button>
+                                <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                        class="fas fa-video"></i></button>
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                        class="fas fa-gavel"></i></button>
+                                <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                    title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                        class="fas fa-tag"></i></button>
+                                <button class="p-1 text-purple-600 hover:text-opacity-80" title="Archive listing"><i
+                                        class="fas fa-archive"></i></button>
+                                <button class="p-1 text-gray-400 hover:text-opacity-80" title="Delete listing"><i
+                                        class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div
+                            class="px-4 py-4 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto bottom-12 left-2 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                            <div class="text-sm font-bold text-secondary">2024 Toyota Camry XLE</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Price:</span> $28,750
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span> 21,428 mi
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span> Other -
+                                Other</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Transmission:</span>
+                                Automatic</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Engine:</span> 2.5L I4
+                                203hp 184ft. lbs.</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                4T1F11AK0RU864335</div>
+                            <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span> RU864335M
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New card 1 -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/ford-mustang.jpg"
+                            alt="2018 Ford Mustang GT" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-md font-medium text-secondary mb-1">2018 Ford Mustang GT</h4>
+                            <p class="text-xs text-grey mb-3">stk: FMG81234 • 18,200 mi • Red • $31,500</p>
+                            <div class="flex flex-wrap justify-center">
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                        class="fas fa-dollar"></i></button>
+                                <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                        class="fas fa-camera "></i></button>
+                                <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                        class="fas fa-video"></i></button>
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                        class="fas fa-gavel"></i></button>
+                                <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                    title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                        class="fas fa-tag"></i></button>
+                                <button class="p-1 text-purple-600 hover:text-opacity-80" title="Archive listing"><i
+                                        class="fas fa-archive"></i></button>
+                                <button class="p-1 text-gray-400 hover:text-opacity-80" title="Delete listing"><i
+                                        class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div
+                            class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto bottom-12 left-2 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                            <div class="text-sm font-bold text-secondary">2018 Ford Mustang GT</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Price:</span> $31,500
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span> 18,200 mi
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span> Red</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Transmission:</span>
+                                Manual</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Engine:</span> 5.0L V8
+                                460hp 420ft. lbs.</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                1FA6P8CF0J5123456</div>
+                            <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span> FMG81234
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New card 2 -->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="https://x-assets.autorevo-powersites.com/content/assets/clients/6e372ff3-6c11-4ec9-a25a-3a8b71c6b708/subaru-outback.jpg"
+                            alt="2022 Subaru Outback Premium" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-md font-medium text-secondary mb-1">2022 Subaru Outback Premium</h4>
+                            <p class="text-xs text-grey mb-3">stk: SOBP22345 • 12,800 mi • Green • $29,200</p>
+                            <div class="flex flex-wrap justify-center">
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Edit price"><i
+                                        class="fas fa-dollar"></i></button>
+                                <button class="p-1 text-blue-500 hover:text-opacity-80" title="Edit photos"><i
+                                        class="fas fa-camera "></i></button>
+                                <button class="p-1 text-red-500 hover:text-opacity-80" title="Edit videos"><i
+                                        class="fas fa-video"></i></button>
+                                <button class="p-1 text-green-600 hover:text-opacity-80" title="Manage eBay"><i
+                                        class="fas fa-gavel"></i></button>
+                                <button class="p-1 text-orange-400 hover:text-opacity-80"
+                                    title="Schedule an appointment"><i class="fas fa-calendar"></i></button>
+                                <button class="p-1 text-red-600 hover:text-opacity-80" title="Mark as sold"><i
+                                        class="fas fa-tag"></i></button>
+                                <button class="p-1 text-purple-600 hover:text-opacity-80" title="Archive listing"><i
+                                        class="fas fa-archive"></i></button>
+                                <button class="p-1 text-gray-400 hover:text-opacity-80" title="Delete listing"><i
+                                        class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div
+                            class="px-2 py-2 m-2 absolute opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto bottom-12 left-2 z-10 w-max h-max bg-white border rounded border-gray-300 flex flex-col  transition-opacity">
+                            <div class="text-sm font-bold text-secondary">2022 Subaru Outback Premium</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Price:</span> $29,200
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Miles:</span> 12,800 mi
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Color:</span> Green</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Transmission:</span> CVT
+                            </div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">Engine:</span> 2.5L H4
+                                182hp 176ft. lbs.</div>
+                            <div class="text-sm text-grey"><span class="text-gray-400 text-sm">VIN:</span>
+                                4S4BTACC6N3232345</div>
+                            <div class="text-xs text-grey"><span class="text-gray-400 text-sm">Stock:</span> SOBP22345
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details/Edit Form Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Product Details/Edit
+                Form</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-grey mb-4">Inventory Form</h3>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Vehicle Type & Basic Info -->
+                    <div class="flex flex-col md:col-span-2 md:flex-row gap-6 border-b pb-6">
+                        <div class="flex-shrink-0">
+                            <img src="https://cf-img.autorevo.com/2019-gmc-canyon-plano-tx-7442586/724x724/3132854-2-revo.jpg?_=1762354405"
+                                alt="Vehicle Thumbnail" class="h-32 w-48 object-cover rounded-md">
+                            <button class="mt-2 text-sm text-primary hover:text-opacity-80">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    style="display: inline-block;vertical-align: middle" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-image">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg> Edit Images
+                            </button>
+                        </div>
+                        <div class="flex-grow flex flex-col lg:flex-row gap-6 pb-6">
+                            <div class="mb-4 text-sm text-grey md:basis-1/3">
+                                <p><b class="text-black">2019 GMC Canyon All Terrain</b> <br />
+                                    Price: $23,000 <br />
+                                    Exterior: black <br />
+                                    Interior: black <br />
+                                    Transmission: 8-Speed Shiftable Automatic <br />
+                                    Mileage: 109,629 mi. <br />
+                                    Stock: K1138628X <br />
+                                    VIN: 1GTG6FEN8K1138628
+                                </p>
+                            </div>
+                            <div class="mb-4 hidden lg:block md:basis-1/2 text-sm text-grey">
+                                <!-- Placeholder for spacing -->
+                            </div>
+                            <div class="mb-4 flex flex-col gap-4 md:flex-row md:flex-wrap">
+                                <div class="flex-row flex-wrap md:flex-grow md:basis-full">
+                                    <div class="w-full">Save to:</div>
+                                    <button
+                                        class="bg-grey hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Appraisals
+                                    </button>
+                                    <button
+                                        class="bg-secondary hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Working
+                                    </button>
+                                    <button
+                                        class="bg-primary hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Showroom
+                                    </button>
+                                </div>
+                                <div class="md:basis-1/3 md:flex-grow">
+                                    <label class="block text-grey text-sm mb-1">Assigned User</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected="">User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                    </select>
+                                </div>
+                                <div class="md:basis-1/3 md:flex-grow">
+                                    <label class="block text-grey text-sm mb-1">Appraised By</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected="">User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Line Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Top Line Information</h3>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Year</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>2023</option>
+                                        <option selected>2019</option>
+                                        <!-- Other years would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Make</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="GMC">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Model</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="Canyon">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Sub-Model</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="All Terrain">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Exterior Color</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected>Black</option>
+                                        <option>Blue</option>
+                                        <!-- Other colors would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Interior Color</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected>Black</option>
+                                        <option>Beige</option>
+                                        <!-- Other colors would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">VIN</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="1GTG6FEN8K1138628">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Stock</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="K1138628X">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Body Type</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>Convertible</option>
+                                        <option>Coupe</option>
+                                        <option selected>Pickup Truck</option>
+                                        <!-- Other body types would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Drive Train</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>4 Wheel Drive</option>
+                                        <option selected>All Wheel Drive</option>
+                                        <option>Front Wheel Drive</option>
+                                        <option>Rear Wheel Drive</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Transmission</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="8-Speed Shiftable Automatic">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Fuel Type</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>Gasoline</option>
+                                        <option>Diesel</option>
+                                        <!-- Other fuel types would be populated here -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Warranty -->
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Pricing</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Website Price</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="23000">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Retail Book Value</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="24500">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Invoice Price</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="24500">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Rebate</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Estimated Payment</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Down Payment</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-primary mt-6 mb-4">Warranty</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Certification</label>
+                                <div class="flex flex-col space-y-2 ">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="not_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">Not Certified</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="oem_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">OEM Certified</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="dealer_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">Dealer Certified</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Warranty Type</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                    <option>Factory Warranty Remaining</option>
+                                    <option>Certified Pre-Owned</option>
+                                    <option selected>AS-IS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6 mb-4">Book Values</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div class="bg-primary pt-2 pb-4 px-4 rounded-md">
+                                <h4 class="font-bold text-white mb-2"><!--<em>inLine</em>--> 
+                                    <span class="bg-white rounded-sm pl-1 mr-2">
+                                        <img
+                                            src="images/inline-logo.svg" alt="inLine"
+                                            class="h-3 inline-block">
+                                    </span>
+                                    <span>Pricing</span>
+                                </h4>
+                                <table class="w-full text-sm text-grey bg-white p-3 rounded-sm">
+                                    <tr class="border-b border-gray-300">
+                                        <td class="py-1 pl-1 text-grey">Days Supply</td>
+                                        <td class="py-1 pr-1 text-right">32 Days</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-300">
+                                        <td class="py-1 pl-1 text-grey">Market Average</td>
+                                        <td class="py-1 pr-1 text-right">$22,771</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-grey">92% of Market</td>
+                                        <td class="py-1 pr-1 text-right">$20,949</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 pl-1 text-grey">82% of Market</td>
+                                        <td class="py-1 pr-1 text-right">$18,672</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bg-carfax_blue p-4 pt-2 rounded-md">
+                                <div class="grid grid-cols-[auto,1fr] gap-2 justify-start mb-2">
+                                    <span class="w-auto self-center m-auto"><img src="images/carfax-logo.svg"
+                                            style="height: 16px;" alt="CARFAX"></span>
+                                    <h4 class="font-bold text-xs md:text-base m-auto text-white w-full self-center">
+                                        History-Based Value</h4>
+                                </div>
+                                <table class="w-full text-sm text-grey bg-white p-3 rounded-sm">
+                                    <tr  class="border-b border-gray-200 text-xs">
+                                        <th class="py-1 pl-1 text-left text-grey">Cond<span
+                                                class="hidden md:inline">ition</span></th>
+                                        <th class="py-1 text-center md:text-right text-grey">W<span
+                                                class="hidden md:inline">holesale</span></th>
+                                        <th class="py-1 text-center md:text-right text-grey">T<span
+                                                class="hidden md:inline">rade</span></th>
+                                        <th class="py-1 pr-1 text-center md:text-right text-grey">R<span
+                                                class="hidden md:inline">etail</span></th>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-xs">Excellent</td>
+                                        <td class="py-1 text-right">$22,771</td>
+                                        <td class="py-1 text-right">$22,771</td>
+                                        <td class="py-1 pr-1 text-right">$22,771</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-xs">Good</td>
+                                        <td class="py-1 text-right">$20,949</td>
+                                        <td class="py-1 text-right">$20,949</td>
+                                        <td class="py-1 pr-1 text-right">$20,949</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 pl-1 text-xs">Fair</td>
+                                        <td class="py-1 text-right">$18,672</td>
+                                        <td class="py-1 text-right">$18,672</td>
+                                        <td class="py-1 pr-1 text-right">$18,672</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARFAX & Pricing Books -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-primary mb-4">CARFAX Report</h3>
+                        <div class="bg-carfax_blue p-4 rounded-md mb-6">
+                            <div class="flex flex-col md:flex-row justify-center md:justify-start items-start md:items-center mb-2 text-xs md:text-base">
+                                <div class="w-auto mb-2 my-0">
+                                    <img src="images/carfax-logo.svg" style="height: 16px;" class="inline" alt="CARFAX">
+                                    <span class="font-bold text-white ml-2"> Report Available</span>
+                                </div>
+                                <button
+                                    class="text-white hover:text-opacity-80 text-xxs md:text-sm border border-white rounded-sm px-1 md:px-2 py-0 ml-auto self-end ">View
+                                    Full Report</button>
+                            </div>
+                            <div class="text-sm text-grey bg-white p-3 rounded-sm">
+                                <p>No accidents reported</p>
+                                <p>2 service history records</p>
+                                <p>1 owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-primary mb-4">Description</h3>
+                        <textarea rows="6"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md">2019 GMC Canyon All Terrain in Onyx Black. This truck features a powerful V6 engine, 8-speed automatic transmission, and All-Wheel Drive. The All Terrain package includes upgraded suspension, skid plates, and all-terrain tires. Leather interior with heated seats and premium audio system.</textarea>
+                        <div class="mt-2 flex justify-between items-center">
+                            <button class="text-sm text-primary hover:text-opacity-80"><i class="fas fa-robot mr-1"></i>Generate AI Description</button>
+                            <span class="text-xs text-grey">Characters: 312/2000</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="md:col-span-2 flex justify-end space-x-4 pt-6 border-t">
+                        <button type="button"
+                            class="px-6 py-2 border border-gray-300 rounded-md text-secondary hover:bg-gray-50">Cancel</button>
+                        <button type="submit"
+                            class="px-6 py-2 bg-primary text-white rounded-md hover:bg-opacity-90">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Photo and video Arrangement/Edit Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Arrange & Edit Listing Photos</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-1">1999 Chevrolet Corvette Base</h3>
+                        <div class="text-sm text-grey">
+                            Red - Other &bull; Stock: X5127962X &bull; VIN: 1G1YY32G4X5127962 &bull; $19,000 &bull; 65,277 miles
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                        <button class="btn bg-grey text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="select-all">Select All</button>
+                        <button class="btn bg-grey text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="select-none">Select None</button>
+                        <button class="btn bg-red-500 text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="delete-selected">Delete Selected</button>
+                        <button class="btn bg-primary text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="save-order">Save Arrangement</button>
+                        <button class="btn bg-secondary text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="reset-order">Reset</button>
+                        <button class="btn bg-blue-500 text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="update-watermarks">Update Watermarks</button>
+                    </div>
+                </div>
+                <div>
+                    <ul id="photo-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-1-revo.jpg?1765806720" alt="Corvette 1" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-2-revo.jpg?1765806720" alt="Corvette 2" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-3-revo.jpg?1765806720" alt="Corvette 3" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-4-revo.jpg?1765806720" alt="Corvette 4" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-5-revo.jpg?1765806720" alt="Corvette 5" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-6-revo.jpg?1765806720" alt="Corvette 6" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-7-revo.jpg?1765806720" alt="Corvette 7" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-8-revo.jpg?1765806720" alt="Corvette 8" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-9-revo.jpg?1765806720" alt="Corvette 9" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-10-revo.jpg?1765806720" alt="Corvette " class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-17-revo.jpg?1765806720" alt="Corvette 1" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-12-revo.jpg?1765806720" alt="Corvette 12" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li><li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-13-revo.jpg?1765806720" alt="Corvette 13" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-14-revo.jpg?1765806720" alt="Corvette 14" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-15-revo.jpg?1765806720" alt="Corvette 15" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-16-revo.jpg?1765806720" alt="Corvette 16" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-xs text-grey mt-4">Drag and drop to reorder. Select images to delete or edit. Save to apply changes.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Elements Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Navigation Elements
+            </h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-primary mb-4">Tabs</h3>
+                <div class="border-b border-gray-200 mb-6">
+                    <nav class="-mb-px flex space-x-8 ">
+                    <nav class="-mb-px flex space-x-8 overflow-x-auto">
+                        <a href="#"
+                            class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">Active
+                            Tab</a>
+                        <a href="#"
+                            class="border-transparent text-grey hover:text-secondary hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">Inactive
+                            Tab</a>
+                        <a href="#"
+                            class="border-transparent text-grey hover:text-secondary hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">Another
+                            Tab</a>
+                    </nav>
+                </div>
+
+                <h3 class="text-xl font-bold text-primary mb-4">Breadcrumbs</h3>
+                <nav class="flex mb-6" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2">
+                        <li>
+                            <div class="flex items-center">
+                                <a href="#" class="text-sm font-medium text-primary hover:text-opacity-80">Home</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i data-feather="chevron-right" class="h-4 w-4 text-grey"></i>
+                                <a href="#"
+                                    class="ml-2 text-sm font-medium text-primary hover:text-opacity-80">Section</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i data-feather="chevron-right" class="h-4 w-4 text-grey"></i>
+                                <span class="ml-2 text-sm font-medium text-grey">Current</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h3 class="text-xl font-bold text-primary mb-4">Pagination</h3>
+                <nav class="flex items-center justify-between border-t border-gray-200 pt-4">
+                    <div class="-mt-px flex w-0 flex-1">
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-sm font-medium text-grey hover:text-secondary">
+                            <i data-feather="chevron-left" class="mr-3 h-5 w-5"></i>
+                            Previous
+                        </a>
+                    </div>
+                    <div class="hidden md:-mt-px md:flex">
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-primary px-4 pt-4 text-sm font-medium text-primary">1</a>
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-grey hover:text-secondary">2</a>
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-grey hover:text-secondary">3</a>
+                        <span
+                            class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-grey">...</span>
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-grey hover:text-secondary">8</a>
+                    </div>
+                    <div class="-mt-px flex w-0 flex-1 justify-end">
+                        <a href="#"
+                            class="inline-flex items-center border-t-2 border-transparent pt-4 pl-1 text-sm font-medium text-grey hover:text-secondary">
+                            Next
+                            <i data-feather="chevron-right" class="ml-3 h-5 w-5"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- Basic Icons Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Basic Website Icons
+            </h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md mb-12">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-home text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-home</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-user text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-user</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-cog text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-cog</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-envelope text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-envelope</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-bell text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-bell</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-search text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-search</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-plus text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-plus</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-edit text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-edit</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-trash text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-trash</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-download text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-download</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-upload text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-upload</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-info-circle text-3xl text-secondary mb-2"></i>
+                        <span class="text-sm text-grey">fa-info-circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transportations Icons Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Transportation
+                    Icons</h2>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-car text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-car</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-truck text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-truck</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-bus text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-bus</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-motorcycle text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-motorcycle</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-bicycle text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-bicycle</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-truck-pickup text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-truck-pickup</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-trailer text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-trailer</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-gas-pump text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-gas-pump</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-oil-can text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-oil-can</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-tachometer-alt text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-tachometer-alt</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-key text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-key</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 border border-gray-200 rounded-lg">
+                            <i class="fas fa-cog text-3xl text-secondary mb-2"></i>
+                            <span class="text-sm text-grey">fa-cog</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <script src="components/sidebar.js"></script>
+    <script src="components/header.js"></script>
+    <script>feather.replace();</script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
