@@ -310,7 +310,7 @@ class CustomHeader extends HTMLElement {
       <div class="header-container">
         <div class="top-row">
           <a href="/" class="logo">
-            <img src="images/autorevo_logo.svg" alt="AR Logo">
+            <img src="images/autorevo_logo_v2.svg" alt="AR Logo">
             <span>VMS</span>
           </a>
           <button class="utility-toggle-btn" aria-label="Open Utility" tabindex="0">
