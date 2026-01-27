@@ -1,0 +1,103 @@
+/*Sidebar Styles*/ 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+:host {
+  display: block;
+  font-family: 'Overpass', sans-serif;
+}
+.condensed + :host {
+  .sidebar {
+    height: calc(100vh - 68px);
+    top: 68px;
+  }
+}
+.sidebar {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 170px;
+  height: calc(100vh - 170px);
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease, top 0.3s, height 0.3s;
+  z-index: 10;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+.toggle-btn {
+  position: absolute;
+  right: -7px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  border: none;
+  z-index: 20;
+}
+.sidebar-content {
+  padding: 20px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.sidebar-header.mt-8 {
+  margin-top: 2rem;
+}
+.sidebar-header span {
+  font-weight: bold;
+  color: #094673;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #676767;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-item:hover {
+  color: #f6931e;
+}
+.nav-item i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+.collapsed .nav-item span {
+  display: none;
+}
+.collapsed .hide-collapsed {
+  display: none;
+}
+.collapsed .sidebar-header span  {
+  display: none;
+}
+.collapsed .sidebar-header {
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.collapsed .nav-item {
+  justify-content: center;
+  padding: 15px 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    top: 142px;
+    height: calc(100vh - 142px);
+  }
+}

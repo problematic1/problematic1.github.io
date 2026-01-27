@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>AutoRevo VMS Style Guide | UX Standards Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f6931e',
+                        secondary: '#094673',
+                        grey: '#676767',
+                        carfax_blue: '#027bae'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50">
+    <custom-header></custom-header>
+    <custom-sidebar></custom-sidebar>
+    <main class="container mx-auto px-4 lg:pt-[240px]">
+        <section class="mb-12">
+            <h1 class="text-4xl font-bold text-secondary mb-6">Vehicle Details </h1>
+            <p class="text-lg text-grey mb-8">Sample vehicle details/edit form layout for the VMS application.
+            </p>
+        </section>
+        <!-- Product Details/Edit Form Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">2019 GMC Canyon All Terrain</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-grey mb-4">Inventory Form</h3>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Vehicle Type & Basic Info -->
+                    <div class="flex flex-col md:col-span-2 md:flex-row gap-6 border-b pb-6">
+                        <div class="flex-shrink-0">
+                            <img src="https://cf-img.autorevo.com/2019-gmc-canyon-plano-tx-7442586/724x724/3132854-2-revo.jpg?_=1762354405"
+                                alt="Vehicle Thumbnail" class="h-32 w-48 object-cover rounded-md">
+                            <button id="edit-images-btn" class="mt-2 text-sm text-primary hover:text-opacity-80">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    style="display: inline-block;vertical-align: middle" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-image">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg> Edit Images
+                            </button>
+                        </div>
+                        <div class="flex-grow flex flex-col lg:flex-row gap-6 pb-6">
+                            <div class="mb-4 text-sm text-grey md:basis-1/3">
+                                <p><b class="text-black">2019 GMC Canyon All Terrain</b> <br />
+                                    Price: $23,000 <br />
+                                    Exterior: black <br />
+                                    Interior: black <br />
+                                    Transmission: 8-Speed Shiftable Automatic <br />
+                                    Mileage: 109,629 mi. <br />
+                                    Stock: K1138628X <br />
+                                    VIN: 1GTG6FEN8K1138628
+                                </p>
+                            </div>
+                            <div class="mb-4 hidden lg:block md:basis-1/2 text-sm text-grey">
+                                <!-- Placeholder for spacing -->
+                            </div>
+                            <div class="mb-4 flex flex-col gap-4 md:flex-row md:flex-wrap">
+                                <div class="flex-row flex-wrap md:flex-grow md:basis-full">
+                                    <div class="w-full">Save to:</div>
+                                    <button
+                                        class="bg-grey hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Appraisals
+                                    </button>
+                                    <button
+                                        class="bg-secondary hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Working
+                                    </button>
+                                    <button
+                                        class="bg-primary hover:bg-opacity-90 text-white text-xs md:text-base font-bold py-1 px-3 rounded-md transition duration-200 my-1 mx-0 flex-1/3">
+                                        Showroom
+                                    </button>
+                                </div>
+                                <div class="md:basis-1/3 md:flex-grow">
+                                    <label class="block text-grey text-sm mb-1">Assigned User</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected="">User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                    </select>
+                                </div>
+                                <div class="md:basis-1/3 md:flex-grow">
+                                    <label class="block text-grey text-sm mb-1">Appraised By</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected="">User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                        <option>User Name</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Line Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Top Line Information</h3>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Year</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>2023</option>
+                                        <option selected>2019</option>
+                                        <!-- Other years would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Make</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="GMC">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Model</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="Canyon">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Sub-Model</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="All Terrain">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Exterior Color</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected>Black</option>
+                                        <option>Blue</option>
+                                        <!-- Other colors would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Interior Color</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option selected>Black</option>
+                                        <option>Beige</option>
+                                        <!-- Other colors would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">VIN</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="1GTG6FEN8K1138628">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Stock</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="K1138628X">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Body Type</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>Convertible</option>
+                                        <option>Coupe</option>
+                                        <option selected>Pickup Truck</option>
+                                        <!-- Other body types would be populated here -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Drive Train</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>4 Wheel Drive</option>
+                                        <option selected>All Wheel Drive</option>
+                                        <option>Front Wheel Drive</option>
+                                        <option>Rear Wheel Drive</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Transmission</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                        value="8-Speed Shiftable Automatic">
+                                </div>
+                                <div>
+                                    <label class="block text-grey text-sm mb-1">Fuel Type</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                        <option>Gasoline</option>
+                                        <option>Diesel</option>
+                                        <!-- Other fuel types would be populated here -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Warranty -->
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Pricing</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Website Price</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="23000">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Retail Book Value</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="24500">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Invoice Price</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="24500">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Rebate</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Estimated Payment</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Down Payment</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md"
+                                    value="0">
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-primary mt-6 mb-4">Warranty</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Certification</label>
+                                <div class="flex flex-col space-y-2 ">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="not_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">Not Certified</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="oem_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">OEM Certified</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="certification" value="dealer_certified" class="form-radio text-primary">
+                                        <span class="ml-2 text-grey text-sm">Dealer Certified</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div>
+                                <label class="block text-grey text-sm mb-1">Warranty Type</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                                    <option>Factory Warranty Remaining</option>
+                                    <option>Certified Pre-Owned</option>
+                                    <option selected>AS-IS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mt-6 mb-4">Book Values</h3>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                            <div class="bg-primary pt-2 pb-4 px-4 rounded-md">
+                                <h4 class="font-bold text-white mb-2"><!--<em>inLine</em>--> 
+                                    <span class="bg-white rounded-sm pl-1 mr-2">
+                                        <img
+                                            src="images/inline-logo.svg" alt="inLine"
+                                            class="h-3 inline-block">
+                                    </span>
+                                    <span>Pricing</span>
+                                </h4>
+                                <table class="w-full text-sm text-grey bg-white p-3 rounded-sm">
+                                    <tr class="border-b border-gray-300">
+                                        <td class="py-1 pl-1 text-grey">Days Supply</td>
+                                        <td class="py-1 pr-1 text-right">32 Days</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-300">
+                                        <td class="py-1 pl-1 text-grey">Market Average</td>
+                                        <td class="py-1 pr-1 text-right">$22,771</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-grey">92% of Market</td>
+                                        <td class="py-1 pr-1 text-right">$20,949</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 pl-1 text-grey">82% of Market</td>
+                                        <td class="py-1 pr-1 text-right">$18,672</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bg-carfax_blue p-4 pt-2 rounded-md">
+                                <div class="grid grid-cols-[auto,1fr] gap-2 justify-start mb-2">
+                                    <span class="w-auto self-center m-auto"><img src="images/carfax-logo.svg"
+                                            style="height: 16px;" alt="CARFAX"></span>
+                                    <h4 class="font-bold text-xs md:text-base m-auto text-white w-full self-center">
+                                        History-Based Value</h4>
+                                </div>
+                                <table class="w-full text-sm text-grey bg-white p-3 rounded-sm">
+                                    <tr  class="border-b border-gray-200 text-xs">
+                                        <th class="py-1 pl-1 text-left text-grey">Cond<span
+                                                class="hidden md:inline">ition</span></th>
+                                        <th class="py-1 text-center md:text-right text-grey">W<span
+                                                class="hidden md:inline">holesale</span></th>
+                                        <th class="py-1 text-center md:text-right text-grey">T<span
+                                                class="hidden md:inline">rade</span></th>
+                                        <th class="py-1 pr-1 text-center md:text-right text-grey">R<span
+                                                class="hidden md:inline">etail</span></th>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-xs">Excellent</td>
+                                        <td class="py-1 text-right">$22,771</td>
+                                        <td class="py-1 text-right">$22,771</td>
+                                        <td class="py-1 pr-1 text-right">$22,771</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-1 pl-1 text-xs">Good</td>
+                                        <td class="py-1 text-right">$20,949</td>
+                                        <td class="py-1 text-right">$20,949</td>
+                                        <td class="py-1 pr-1 text-right">$20,949</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1 pl-1 text-xs">Fair</td>
+                                        <td class="py-1 text-right">$18,672</td>
+                                        <td class="py-1 text-right">$18,672</td>
+                                        <td class="py-1 pr-1 text-right">$18,672</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARFAX & Pricing Books -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-primary mb-4">CARFAX Report</h3>
+                        <div class="bg-carfax_blue p-4 rounded-md mb-6">
+                            <div class="flex flex-col md:flex-row justify-center md:justify-start items-start md:items-center mb-2 text-xs md:text-base">
+                                <div class="w-auto mb-2 my-0">
+                                    <img src="images/carfax-logo.svg" style="height: 16px;" class="inline" alt="CARFAX">
+                                    <span class="font-bold text-white ml-2"> Report Available</span>
+                                </div>
+                                <button
+                                    class="text-white hover:text-opacity-80 text-xxs md:text-sm border border-white rounded-sm px-1 md:px-2 py-0 ml-auto self-end ">View
+                                    Full Report</button>
+                            </div>
+                            <div class="text-sm text-grey bg-white p-3 rounded-sm">
+                                <p>No accidents reported</p>
+                                <p>2 service history records</p>
+                                <p>1 owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-primary mb-4">Description</h3>
+                        <textarea rows="6"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md">2019 GMC Canyon All Terrain in Onyx Black. This truck features a powerful V6 engine, 8-speed automatic transmission, and All-Wheel Drive. The All Terrain package includes upgraded suspension, skid plates, and all-terrain tires. Leather interior with heated seats and premium audio system.</textarea>
+                        <div class="mt-2 flex justify-between items-center">
+                            <button class="text-sm text-primary hover:text-opacity-80"><i class="fas fa-robot mr-1"></i>Generate AI Description</button>
+                            <span class="text-xs text-grey">Characters: 312/2000</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="md:col-span-2 flex justify-end space-x-4 pt-6 border-t">
+                        <button type="button"
+                            class="px-6 py-2 border border-gray-300 rounded-md text-secondary hover:bg-gray-50">Cancel</button>
+                        <button type="submit"
+                            class="px-6 py-2 bg-primary text-white rounded-md hover:bg-opacity-90">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Photo and video Arrangement/Edit Section -->
+        <div id="photo-video-modal" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="modal-content relative bg-white rounded-lg shadow-lg max-w-5xl w-full p-0">
+                <button id="close-photo-video-modal" class="absolute top-4 right-4 text-2xl text-gray-400 hover:text-gray-700 z-10" aria-label="Close Modal">&times;</button>
+                <section id="photo-video-arrangement" class="mb-0">
+            <h2 class="text-3xl font-semibold text-secondary mb-6 border-b-2 border-primary pb-2">Arrange & Edit Listing Photos</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-1">1999 Chevrolet Corvette Base</h3>
+                        <div class="text-sm text-grey">
+                            Red - Other &bull; Stock: X5127962X &bull; VIN: 1G1YY32G4X5127962 &bull; $19,000 &bull; 65,277 miles
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                        <button class="btn bg-grey text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="select-all">Select All</button>
+                        <button class="btn bg-grey text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="select-none">Select None</button>
+                        <button class="btn bg-red-500 text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="delete-selected">Delete Selected</button>
+                        <button class="btn bg-primary text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="save-order">Save Arrangement</button>
+                        <button class="btn bg-secondary text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="reset-order">Reset</button>
+                        <button class="btn bg-blue-500 text-white px-3 py-1 rounded hover:bg-opacity-90 text-xs" id="update-watermarks">Update Watermarks</button>
+                    </div>
+                </div>
+                <div>
+                    <ul id="photo-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-1-revo.jpg?1765806720" alt="Corvette 1" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-2-revo.jpg?1765806720" alt="Corvette 2" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-3-revo.jpg?1765806720" alt="Corvette 3" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-4-revo.jpg?1765806720" alt="Corvette 4" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-5-revo.jpg?1765806720" alt="Corvette 5" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-6-revo.jpg?1765806720" alt="Corvette 6" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-7-revo.jpg?1765806720" alt="Corvette 7" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-8-revo.jpg?1765806720" alt="Corvette 8" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-9-revo.jpg?1765806720" alt="Corvette 9" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-10-revo.jpg?1765806720" alt="Corvette " class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-17-revo.jpg?1765806720" alt="Corvette 1" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-12-revo.jpg?1765806720" alt="Corvette 12" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li><li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-13-revo.jpg?1765806720" alt="Corvette 13" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-14-revo.jpg?1765806720" alt="Corvette 14" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-15-revo.jpg?1765806720" alt="Corvette 15" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="relative group bg-gray-50 rounded p-2 flex flex-col items-center cursor-move" draggable="true">
+                            <img src="https://cf-img.autorevo.com/1999-chevrolet-corvette-plano-tx-7453671/150x150/3146509-16-revo.jpg?1765806720" alt="Corvette 16" class="rounded shadow mb-2 w-36 h-26 object-contain">
+                            <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity absolute top-2 right-2">
+                                <button class="rounded text-red-500 hover:text-red-700 bg-white shadow p-1" title="Delete"><i class="fas fa-trash"></i></button>
+                                <button class="rounded text-gray-500 hover:text-gray-700 bg-white shadow p-1" title="Reset"><i class="fas fa-undo"></i></button>
+                                <button class="rounded text-primary hover:text-secondary bg-white shadow p-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="rounded text-green-500 hover:text-green-700 bg-white shadow p-1" title="Select"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-xs text-grey mt-4">Drag and drop to reorder. Select images to delete or edit. Save to apply changes.</div>
+                </div>
+            </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script>
+    // Modal open/close logic
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('photo-video-modal');
+        var openBtn = document.getElementById('edit-images-btn');
+        var closeBtn = document.getElementById('close-photo-video-modal');
+        if (openBtn && modal && closeBtn) {
+            openBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            });
+            closeBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+            // Optional: close modal on overlay click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        }
+    });
+    </script>
+    <script src="components/sidebar.js"></script>
+    <script src="components/header.js"></script>
+    <script>feather.replace();</script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
