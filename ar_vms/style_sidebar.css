@@ -1,26 +1,21 @@
 /*Sidebar Styles*/ 
-/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
 :host {
   display: block;
   font-family: 'Overpass', sans-serif;
 }
-.condensed + :host {
-  .sidebar {
-    height: calc(100vh - 68px);
-    top: 68px;
-  }
-}
 .sidebar {
   background: white;
-  position: fixed;
-  left: 0;
-  top: 170px;
-  height: calc(100vh - 170px);
   box-shadow: 2px 0 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease, top 0.3s, height 0.3s;
-  z-index: 10;
   overflow-y: auto;
   overflow-x: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .sidebar.collapsed {
@@ -97,7 +92,7 @@
 
 @media (min-width: 768px) {
   .sidebar {
-    top: 142px;
-    height: calc(100vh - 142px);
+    /* top: 142px;
+    height: calc(100vh - 142px); */
   }
 }

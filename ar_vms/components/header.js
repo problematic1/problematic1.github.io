@@ -17,7 +17,7 @@ class CustomHeader extends HTMLElement {
       const isCondensed = window.scrollY > 20;
       this.classList.toggle('condensed', isCondensed);
       updateNavRowsDisplay();
-      const isMobile = window.innerWidth <= 768;
+      /*const isMobile = window.innerWidth <= 768;
       const topPx = isCondensed ? (isMobile ? '70px' : '68px') : (isMobile ? '164x' : '164px');
       const topPad = isCondensed ? (isMobile ? '70px' : '84px') : (isMobile ? '186px' : '186px');
       document.querySelector('main').style.paddingTop = topPad;
@@ -28,7 +28,7 @@ class CustomHeader extends HTMLElement {
           sidebarEl.style.top = topPx;
           sidebarEl.style.height = `calc(100vh - ${topPx})`;
         }
-      }
+      }*/
     });
   this.attachShadow({ mode: 'open' });
   this.shadowRoot.innerHTML = `

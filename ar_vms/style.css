@@ -8,6 +8,10 @@
   --white: #fff;
   --transparent-black-50: rgba(0, 0, 0, 0.5);
   --transparent-black-80: rgba(0, 0, 0, 0.2);
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 }
 
 /* Modal Styles */
@@ -22,9 +26,10 @@
   height: 100vh;
   background: var(--transparent-black-50, rgba(0, 0, 0, 0.5));
   z-index: 9999;
-}
-.modal.hidden {
-  display: none;
+
+  &.hidden {
+    display: none;
+  }
 }
 .modal-content {
   background: var(--white, #fff);
@@ -33,58 +38,74 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+
+  button[aria-label="Close Modal"] {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--lt-grey, #888);
+    cursor: pointer;
+    z-index: 10;
+  }
 }
-.modal-content button[aria-label="Close Modal"] {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--lt-grey, #888);
-  cursor: pointer;
-  z-index: 10;
-}
+
 /* Base Styles */
 main.mx-auto {
   transition: all 0.3s ease;
-  width: 100%;
-  padding-left: 76px;
+  width: calc(100vw - 248px);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* 
-body.sidebar-collapsed main.mx-auto {
-  padding-left: 1rem;
-} 
-  
-@media (max-width: 768px) {
-  main {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  main.mx-auto {
-    padding-left: calc(250px + 1rem);
-  }
-} 
-
-@media (max-width: 768px) {
-  main {
-    padding-top: 48px;
-  }
-}*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 
 body {
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 134px auto;
+  grid-gap: 0.5rem;
+  margin: 0 auto;
+  padding: 0;
   font-family: "Overpass", "Arial", sans-serif !important;
   line-height: 1.4;
   color: var(--grey, #676767);
+  max-width: 100vw;
+}
+body .condensed + custom-sidebar .sidebar {
+  height: calc(100vh - 68px);
+  top: 68px !important;
 }
 
 
 main {
-  padding-top: 240px;
+  grid-column: 2 / span 1;
+  grid-row-start: 2;
+  z-index: 1;
+  width: 100%;
+}
+custom-header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+custom-sidebar {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  position: sticky;
+  top: 142px;
+  z-index: 3;
+}
+body.sidebar-collapsed {
+  grid-template-columns: 60px auto;
+  main.mx-auto {
+    width: calc(100vw - 68px);
+  }
 }
 /* Custom Utility Classes */
 .bg-primary {
@@ -155,7 +176,7 @@ textarea:focus {
 }
 
 
-
+/* sidebar main content shift 
 @media (min-width: 768px) {
   main.mx-auto {
     transform: translateX(240px);
@@ -187,3 +208,4 @@ textarea:focus {
     max-width: 1880px !important;
   }
 }
+*/

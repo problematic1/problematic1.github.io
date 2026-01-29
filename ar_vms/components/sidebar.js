@@ -6,13 +6,13 @@ class CustomSidebar extends HTMLElement {
 
   connectedCallback() {
     // Default collapsed on mobile, open on desktop
-    if (window.innerWidth <= 768) {
+    //if (window.innerWidth <= 768) {
       this.collapsed = true;
       document.body.classList.add('sidebar-collapsed');
-    } else {
-      this.collapsed = false;
-      document.body.classList.remove('sidebar-collapsed');
-    }
+    // } else {
+    //   this.collapsed = false;
+    //   document.body.classList.remove('sidebar-collapsed');
+    // }
     this.attachShadow({ mode: 'open' });
     this.render();
     this.setupEventListeners();
