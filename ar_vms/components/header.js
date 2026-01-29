@@ -17,18 +17,6 @@ class CustomHeader extends HTMLElement {
       const isCondensed = window.scrollY > 20;
       this.classList.toggle('condensed', isCondensed);
       updateNavRowsDisplay();
-      /*const isMobile = window.innerWidth <= 768;
-      const topPx = isCondensed ? (isMobile ? '70px' : '68px') : (isMobile ? '164x' : '164px');
-      const topPad = isCondensed ? (isMobile ? '70px' : '84px') : (isMobile ? '186px' : '186px');
-      document.querySelector('main').style.paddingTop = topPad;
-      const sidebar = document.querySelector('custom-sidebar');
-      if (sidebar && sidebar.shadowRoot) {
-        const sidebarEl = sidebar.shadowRoot.querySelector('.sidebar');
-        if (sidebarEl) {
-          sidebarEl.style.top = topPx;
-          sidebarEl.style.height = `calc(100vh - ${topPx})`;
-        }
-      }*/
     });
   this.attachShadow({ mode: 'open' });
   this.shadowRoot.innerHTML = `
@@ -37,7 +25,7 @@ class CustomHeader extends HTMLElement {
       </style>
       <div class="header-container">
         <div class="top-row">
-          <a href="/" class="logo">
+          <a href="/ar_vms/styleguide.html" class="logo">
             <img src="images/autorevo_logo_v2.svg" alt="AR Logo">
             <span>VMS</span>
           </a>
@@ -64,7 +52,7 @@ class CustomHeader extends HTMLElement {
               <div class="dealership">Sunrise Auto Group</div>
               <div class="welcome">
                 <span>Welcome, John Doe</span>
-                <button class="logout-btn">
+                <button class="logout-btn" title="Logout" aria-label="Logout">
                   <i class="fas fa-sign-out-alt"></i>
                 </button>
               </div>
