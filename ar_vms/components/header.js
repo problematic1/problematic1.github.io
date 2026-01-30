@@ -13,11 +13,21 @@ class CustomHeader extends HTMLElement {
         }
       }
     };
-    window.addEventListener('scroll', () => {
+    // Debounce utility
+    function debounce(func, wait) {
+      let timeout;
+      return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    const handleScroll = () => {
       const isCondensed = window.scrollY > 20;
       this.classList.toggle('condensed', isCondensed);
       updateNavRowsDisplay();
-    });
+    };
+    window.addEventListener('scroll', debounce(handleScroll, 30));
   this.attachShadow({ mode: 'open' });
   this.shadowRoot.innerHTML = `
       <style>

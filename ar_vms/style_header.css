@@ -282,3 +282,12 @@
     padding: 0.25rem 1rem;
   }
 }
+@media (min-width: 768px) {
+  .logo img {
+    height: 52px;
+    max-width: 100%;
+  }
+  :host(.condensed) .logo img {
+    height: 52px;
+  }
+}
